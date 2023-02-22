@@ -1,11 +1,32 @@
 $main-font: 'Mulish';
 $main-color: #111111;
+$secondary-color: #4A4FF2;
+
+
+@mixin text-opacity {
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+@mixin paragraph-normal{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+}
+
 
 body{
     font: 100% $main-font;
     font-style: normal;
     font-weight: 700;
     color: $main-color;
+    max-width: 1110px;
+    width: 100%;
+    margin: auto;
 }
 
 /*HEADER*/
@@ -16,8 +37,6 @@ header{
     align-items: center;
     margin-top: 61px;
     margin-bottom: 91px;
-    margin-right: 125px;
-    margin-left: 125px;
 }
 
 .menu{
@@ -33,39 +52,33 @@ header{
     letter-spacing: -0.346154px;
 }
 
-
-a:link {
-    text-decoration: none;
-    color: #111111;
-}
-  
-  a:visited {
-    text-decoration: none;
-    color: #111111;
-}
-  
-  a:hover {
-    opacity: 70%;
-}
-  
-  a:active {
-    text-decoration: none;
-    color:#111111
+a{
+    &:link{
+        text-decoration: none;
+        color: #111111;
+    }
+    &:visited{
+        text-decoration: none;
+        color: #111111;
+    }
+    &:hover{
+        color: $secondary-color;
+    }
+    &:active{
+        text-decoration: none;
+        color:#111111
+    }
 }
 
 /*MAIN*/
 
-main{
-    margin-right: 125px;
-    margin-left: 125px;
-}
 
 .shooting-stars{
     font-size: 22px;
     line-height: 28px;
     /* identical to box height */
     letter-spacing: -0.423077px;
-    color: #4A4FF2;
+    color: $secondary-color;
     padding-bottom: 32px;
 }
 
@@ -85,13 +98,8 @@ h1{
 }
 
 .secondary-txt{
+    @include text-opacity();
     font-style: italic;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 23px;
-    /* identical to box height */
-    mix-blend-mode: normal;
-    opacity: 0.6;
 }
 
 .title__container{
@@ -109,8 +117,10 @@ h1{
     justify-self: flex-start;
 }
 
+//GRID//
 .grid_container{
     margin-top: 144px;
+    margin-bottom: 91px;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(32, 1fr);
@@ -163,4 +173,115 @@ h1{
 
 .eleven{
     grid-area: 27/7/33/10;
+}
+
+//
+
+.section_one{
+    display: flex;
+    gap: 94px;
+    margin-bottom: 101px;
+
+}
+
+.h2{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+}
+
+.section_one-h2{
+    max-width: 635px;
+}
+
+.section_one-list{
+    @include text-opacity();
+    display: flex;
+    gap: 70px;
+}
+
+.section_one-list-item{
+    padding-top:10px;
+}
+
+
+//INFO SECTION//
+
+@mixin info_section-container{
+    width: 100%;
+    max-width: 1100px;
+}
+
+.section_container{
+    @include info_section-container();
+    margin-top: 48px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section_title{
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.content_block{
+    max-width: 190px;
+    height: 110px;
+}
+
+.content_top{
+    display: flex;
+    justify-content: flex-end;
+    gap: 121px;
+}
+
+.content_bottom{
+    display: flex;
+    justify-content: flex-end;
+    gap: 121px;
+    @include info_section-container();
+
+}
+
+.paragraph-title{
+    @include paragraph-normal();
+}
+
+.paragraph-text{
+    @include text-opacity();
+    @include paragraph-normal();
+    line-height: 26px;
+}
+
+
+
+.line-long{
+    background: #D8D8D8;
+    width: 1110px;
+    height: 2px;
+}
+
+//FOOTER//
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 47px;
+    margin-top: 114px;
+}
+
+.footer_menu{
+    display: flex;
+    gap: 30px;
+}
+
+.footer_right{
+    display: flex;
+    gap: 95px;
+}
+
+.footer_icons{
+    display: flex;
+    gap: 24px;
 }
