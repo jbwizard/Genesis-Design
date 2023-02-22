@@ -1,0 +1,193 @@
+
+.shooting-stars{
+    font-size: 22px;
+    line-height: 28px;
+    /* identical to box height */
+    letter-spacing: -0.423077px;
+    color: $secondary-color;
+    padding-bottom: 32px;
+}
+
+h1{
+    font-size: 40px;
+    line-height: 60px;
+    /* or 150% */
+}
+
+.line{
+    width: 30px;
+    height: 2px;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    background: #111111;
+    margin-bottom: 9px;
+}
+
+.secondary-txt{
+    @include text-opacity();
+    font-style: italic;
+}
+
+.title__container{
+    display: flex;
+    align-items: last baseline;
+    gap: 190px;
+}
+
+.title__title{
+    width: 635px;
+    height: 251px;
+}
+
+.title__right{
+    justify-self: flex-start;
+}
+
+//GRID//
+.grid_container{
+    margin-top: 144px;
+    margin-bottom: 91px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(32, 1fr);
+    gap: 20px;
+}
+
+.zero{
+    grid-area: 1/1/8/4;
+}
+
+.one{
+    grid-area: 8/1/16/4;
+}
+
+.two{
+    grid-area: 16/1/24/4;
+}
+
+.three{
+    grid-area: 24/1/33/4;
+}
+
+.four{
+    grid-area: 1/4/7/7;
+}
+
+.five{
+    grid-area: 7/4/14/7;
+}
+
+.six{
+    grid-area: 14/4/23/7;
+}
+
+.seven{
+    grid-area: 23/4/33/7;
+}
+
+.eight{
+    grid-area: 1/7/11/10;
+}
+
+.nine{
+    grid-area: 11/7/18/10;
+}
+
+.ten{
+    grid-area: 18/7/27/10;
+}
+
+.eleven{
+    grid-area: 27/7/33/10;
+}
+
+//
+
+.section_one{
+    display: flex;
+    gap: 94px;
+    margin-bottom: 101px;
+
+}
+
+h2{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    /* or 136% */
+}
+
+.section_one-h2{
+    max-width: 635px;
+}
+
+.section_one-list{
+    @include text-opacity();
+    display: flex;
+    gap: 70px;
+}
+
+.section_one-list-item{
+    padding-top:10px;
+}
+
+
+//INFO SECTION//
+
+@mixin info_section-container{
+    width: 100%;
+    max-width: 1100px;
+}
+
+.section_container{
+    @include info_section-container();
+    margin-top: 48px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section_title{
+    margin-top: 51px;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.content_block{
+    max-width: 190px;
+    height: 110px;
+}
+
+.content_top{
+    display: flex;
+    justify-content: flex-end;
+    gap: 121px;
+    margin-top: 51px;
+}
+
+.content_bottom{
+    display: flex;
+    justify-content: flex-end;
+    gap: 121px;
+    @include info_section-container();
+    margin-bottom: 32px;
+
+}
+
+.paragraph-title{
+    @include paragraph-normal();
+}
+
+.paragraph-text{
+    @include text-opacity();
+    @include paragraph-normal();
+    line-height: 26px;
+}
+
+
+
+.line-long{
+    background: #D8D8D8;
+    width: 1110px;
+    height: 2px;
+}

@@ -1,0 +1,42 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 61px;
+    margin-bottom: 91px;
+}
+
+.logo:hover{
+    opacity: 50%;
+}
+
+.menu{
+    display: flex;
+    gap: 29px;
+    list-style: none;
+}
+
+.menu_items{
+    font-size: 18px;
+    line-height: 23px;
+    /* identical to box height */
+    letter-spacing: -0.346154px;
+}
+
+a{
+    &:link{
+        text-decoration: none;
+        color: #111111;
+    }
+    &:visited{
+        text-decoration: none;
+        color: #111111;
+    }
+    &:hover{
+        color: $secondary-color;
+    }
+    &:active{
+        text-decoration: none;
+        color:#111111
+    }
+}
