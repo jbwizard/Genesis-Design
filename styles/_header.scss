@@ -8,6 +8,7 @@ header{
 
 .logo:hover{
     opacity: 50%;
+    transition: all 0.3s ease-in;
 }
 
 .menu{
@@ -26,7 +27,7 @@ header{
 a{
     &:link{
         text-decoration: none;
-        color: #111111;
+        color:#111111;
     }
     &:visited{
         text-decoration: none;
@@ -34,9 +35,10 @@ a{
     }
     &:hover{
         color: $secondary-color;
+        transition: all 0.3s ease-in;
     }
     &:active{
         text-decoration: none;
-        color:#111111
+        color: $secondary-color;
     }
 }
