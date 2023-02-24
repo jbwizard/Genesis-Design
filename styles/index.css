@@ -1823,17 +1823,32 @@ h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 18px;
-  text-align: left;
 }
 
 .description_line {
-  max-width: 335px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 100px;
+}
+
+.align-one {
+  padding-left: 10px;
+}
+
+.align-two {
+  margin-left: -35px;
+}
+
+.align-three {
+  padding-left: 22px;
+}
+
+.align-four {
+  padding-left: 18px;
 }
 
 .section_one-paragraph {
@@ -1862,6 +1877,7 @@ h2 {
 .description_txt {
   font-size: 18px;
   line-height: 23px;
+  margin-bottom: 10px;
 }
 
 .description_txt-title {
@@ -1869,6 +1885,7 @@ h2 {
   line-height: 23px;
   mix-blend-mode: normal;
   opacity: 0.5;
+  margin-bottom: 10px;
 }
 
 .img_three {
